@@ -6,13 +6,12 @@ import reportWebVitals from './reportWebVitals'
 import TodoContainer from "./functionBased/components/TodoContainer"
 import "./functionBased/App.css"
 import { BrowserRouter as Router } from "react-router-dom"
-import About from "./functionBased/components/About";
-import NotMatch from "./functionBased/components/NotMatch";
+import { HashRouter as Router } from "react-router-dom"
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <TodoContainer />
-    </Router>
+   <Router basename={process.env.PUBLIC_URL}>
+  <TodoContainer />
+</Router>
   </React.StrictMode>,
   document.getElementById("root")
 )
