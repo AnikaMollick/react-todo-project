@@ -2,16 +2,19 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
-
+import reportWebVitals from './reportWebVitals'
+import TodoContainer from "./functionBased/components/TodoContainer"
+import "./functionBased/App.css"
+import { BrowserRouter as Router } from "react-router-dom"
+import About from "./functionBased/components/About";
+import NotMatch from "./functionBased/components/NotMatch";
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Router>
+      <TodoContainer />
+    </Router>
   </React.StrictMode>,
-  document.getElementById('root')
-);
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+  document.getElementById("root")
+)
 reportWebVitals();
+
